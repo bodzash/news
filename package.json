@@ -25,6 +25,7 @@
     "@types/react-dom": "^18.0.10",
     "babel-loader": "^9.1.2",
     "css-loader": "^6.7.3",
+    "dotenv-webpack": "^8.0.1",
     "eslint": "^8.33.0",
     "eslint-config-react-app": "^7.0.1",
     "html-webpack-plugin": "^5.5.0",
@@ -44,6 +45,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-query": "^3.39.3",
     "react-router-dom": "^6.8.1"
   }
 }
