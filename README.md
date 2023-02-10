@@ -1,8 +1,6 @@
-# Radio app
+# News app
 
 Practice project
-
-## Using:
 
 ### Tech:
 
@@ -21,7 +19,7 @@ Prettier
 
 ### API:
 
-spotify API
+[newsdata.io API](https://newsdata.io/)
 
 ### Github Flow
 
