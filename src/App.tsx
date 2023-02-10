@@ -13,7 +13,19 @@ export const App: React.FC = () => {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route index element={<Feed category={ECategories.None} />} />
+          <Route path="/" element={<Feed category={ECategories.None} />} />
+          <Route
+            path="/business"
+            element={<Feed category={ECategories.Business} />}
+          />
+          <Route
+            path="/entertainment"
+            element={<Feed category={ECategories.Entertainment} />}
+          />
+          <Route
+            path="/environment"
+            element={<Feed category={ECategories.Environment} />}
+          />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>
