@@ -1,6 +1,6 @@
 import React from "react";
 import { ECategories } from "./globals";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { QueryClientProvider, QueryClient } from "react-query";
 import { Navbar } from "./components/Navbar";
 import { Feed } from "./pages/Feed";
@@ -52,6 +52,7 @@ export const App: React.FC = () => {
             path="/world"
             element={<Feed category={ECategories.World} />}
           />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
     </QueryClientProvider>

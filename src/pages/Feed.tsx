@@ -17,7 +17,7 @@ const fetchCategoryNews = async (category: ECategories) => {
   return res.json();
 };
 
-export const Feed = ({ category }: FeedProps) => {
+export const Feed = ({ category }: FeedProps): JSX.Element => {
   const { data, status } = useQuery(`${category}`, () =>
     fetchCategoryNews(category)
   );
@@ -25,9 +25,9 @@ export const Feed = ({ category }: FeedProps) => {
 
   return (
     <main>
-      {status === "loading" && (
-        <div>
-          <h2>Loading please wait</h2>
+      {status === "loading" && !data && (
+        <div className="loading-wrapper">
+          <h2 className="loading-text">Loading please wait</h2>
           <Oval
             height={80}
             width={80}
@@ -40,6 +40,11 @@ export const Feed = ({ category }: FeedProps) => {
             strokeWidth={4}
             strokeWidthSecondary={4}
           />
+        </div>
+      )}
+      {status === "error" && (
+        <div className="error-wrapper">
+          <h2 className="error-text">Something went wrong :/</h2>
         </div>
       )}
       {data &&

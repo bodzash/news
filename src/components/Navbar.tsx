@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { ECategories } from "../globals";
 import "./Navbar.scss";
 
-export const Navbar = () => {
+export const Navbar = (): JSX.Element => {
   return (
     <nav className="navbar">
       <ul className="navbar-list-wrapper">

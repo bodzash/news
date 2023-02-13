@@ -1,25 +1,32 @@
 .navbar {
+  width: 100%;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: blue;
 
   .navbar-list-wrapper {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    background-color: green;
+    background-color: #666;
 
     .navbar-list-item {
+      width: 10%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       list-style-type: none;
       text-transform: capitalize;
       
       & > a {
+        text-align: center;
+        width: 100%;
+        padding: .8rem 0;
         text-decoration: none;
-      }
+        color: white;
 
-      background-color: red;
+        &:hover {
+          background-color: #111;
+        }
+      }
     }
   }
 }
