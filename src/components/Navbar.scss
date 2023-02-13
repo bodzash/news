@@ -1,0 +1,25 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: blue;
+
+  .navbar-list-wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: green;
+
+    .navbar-list-item {
+      list-style-type: none;
+      text-transform: capitalize;
+      
+      & > a {
+        text-decoration: none;
+      }
+
+      background-color: red;
+    }
+  }
+}
