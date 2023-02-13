@@ -18,6 +18,24 @@ export const Navbar = () => {
         <li>
           <Link to="/environment">{ECategories.Environment}</Link>
         </li>
+        <li>
+          <Link to="/food">{ECategories.Food}</Link>
+        </li>
+        <li>
+          <Link to="/health">{ECategories.Health}</Link>
+        </li>
+        <li>
+          <Link to="/politics">{ECategories.Politics}</Link>
+        </li>
+        <li>
+          <Link to="/technology">{ECategories.Technology}</Link>
+        </li>
+        <li>
+          <Link to="/top">{ECategories.Top}</Link>
+        </li>
+        <li>
+          <Link to="/world">{ECategories.World}</Link>
+        </li>
       </ul>
     </nav>
   );

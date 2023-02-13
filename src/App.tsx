@@ -15,7 +15,7 @@ export const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<Feed category={ECategories.None} />} />
           <Route
-            path="/business"
+            path="business"
             element={<Feed category={ECategories.Business} />}
           />
           <Route
@@ -25,6 +25,32 @@ export const App: React.FC = () => {
           <Route
             path="/environment"
             element={<Feed category={ECategories.Environment} />}
+          />
+          <Route path="/food" element={<Feed category={ECategories.Food} />} />
+          <Route
+            path="/health"
+            element={<Feed category={ECategories.Health} />}
+          />
+          <Route
+            path="/politics"
+            element={<Feed category={ECategories.Politics} />}
+          />
+          <Route
+            path="/science"
+            element={<Feed category={ECategories.Science} />}
+          />
+          <Route
+            path="/sports"
+            element={<Feed category={ECategories.Sports} />}
+          />
+          <Route
+            path="/technology"
+            element={<Feed category={ECategories.Technology} />}
+          />
+          <Route path="/top" element={<Feed category={ECategories.Top} />} />
+          <Route
+            path="/world"
+            element={<Feed category={ECategories.World} />}
           />
         </Routes>
       </BrowserRouter>

@@ -9,6 +9,7 @@ module.exports = {
   output: {
     filename: "main.js",
     path: path.resolve(__dirname, "build"),
+    publicPath: '/',
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -18,6 +19,7 @@ module.exports = {
     new Dotenv({ systemvars: true }),
   ],
   devServer: {
+    historyApiFallback: true,
     static: {
       directory: path.join(__dirname, "build"),
     },
@@ -25,11 +27,6 @@ module.exports = {
   },
   module: {
     rules: [
-      /*{
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: ["babel-loader"],
-      },*/
       {
         test: /\.(ts|tsx)$/,
         loader: "ts-loader"
