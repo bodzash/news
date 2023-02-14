@@ -3,6 +3,7 @@ import { ECategories } from "../globals";
 import { useQuery } from "react-query";
 import { Article, ArticleProps } from "../components/Article";
 import { Oval } from "react-loader-spinner";
+import "./Feed.scss";
 
 export interface FeedProps {
   category: ECategories;
@@ -24,7 +25,7 @@ export const Feed = ({ category }: FeedProps): JSX.Element => {
   console.log(data, status);
 
   return (
-    <main>
+    <main className="feed-wrapper">
       {status === "loading" && !data && (
         <div className="loading-wrapper">
           <h2 className="loading-text">Loading please wait</h2>

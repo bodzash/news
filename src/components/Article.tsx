@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import TimeAgo from "javascript-time-ago";
 import en from "javascript-time-ago/locale/en";
 import "./Article.scss";
@@ -16,18 +16,29 @@ TimeAgo.addDefaultLocale(en);
 const timeAgo = new TimeAgo("en-US");
 
 export const Article = (props: ArticleProps): JSX.Element => {
+  const [isPlaceholderActive, setIsPlaceholderActive] = useState<boolean>(
+    props.image_url === null
+  );
+
   return (
     <article className="article-wrapper">
-      <h4 className="article-title">{props.title}</h4>
+      <h3 className="article-title">{props.title}</h3>
       <p className="article-date">
         {timeAgo.format(new Date(props.pubDate))} by {props.source_id}
       </p>
-      <p className="article-desc">{props.description}</p>
+      <div
+        style={{ display: isPlaceholderActive ? "flex" : "none" }}
+        className="article-image-placeholder"
+      >
+        No image found
+      </div>
       <img
+        onError={() => setIsPlaceholderActive(true)}
         className="article-image"
         src={props.image_url}
-        alt={/*description*/ ""}
+        alt={""}
       />
+      <p className="article-desc">{props.description}</p>
     </article>
   );
 };

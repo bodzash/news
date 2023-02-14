@@ -1,0 +1,7 @@
+.feed-wrapper {
+  display: grid;
+  padding: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+  gap: .5em;
+  grid-auto-flow: row;
+}

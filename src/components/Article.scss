@@ -1,5 +1,29 @@
 .article-wrapper {
   width: 100%;
-  background-color: red;
-  border-bottom: 4px solid black;
+  height: auto;
+  padding: 1rem 1rem;
+  box-shadow: 2px 2px 4px rgba(128, 128, 128, 0.2);
+
+  .article-date {
+    margin: .75rem 0;
+  }
+
+  .article-image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    background-color: gray;
+    color: white;
+    aspect-ratio: 3 / 2;
+    user-select: none;
+  }
+  
+  .article-image {
+    width: 100%;
+  }
+
+  .article-desc {
+    margin-top: .75rem;
+  }
 }

@@ -1,6 +1,9 @@
 .navbar {
   width: 100%;
   display: flex;
+  position: sticky;
+  top: 0;
+  margin-bottom: .5rem;
 
   .navbar-list-wrapper {
     width: 100%;
