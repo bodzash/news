@@ -5,3 +5,21 @@
   gap: .5em;
   grid-auto-flow: row;
 }
+
+@media screen and (max-width: 1000px) {
+  .feed-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(30%, 1fr));
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .feed-wrapper {
+    grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .feed-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
